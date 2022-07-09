@@ -91,7 +91,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           port: ${{ secrets.PORT }}
-          source: "infra/docker-compose.yaml, infra/.env"
+          source: "infra/docker-compose.yaml, infra/.env, infra/redoc.yaml"
           target: "/home/annatereshonok/yamdb_final"
           strip_components: 1
     
