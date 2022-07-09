@@ -1,4 +1,4 @@
-name: YAMDB-workflow
+name: YAMDB workflow
 
 on: [push]
 
