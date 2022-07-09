@@ -81,6 +81,7 @@ jobs:
           port: ${{ secrets.PORT }}
           source: "infra/nginx/default.conf"
           target: "/home/annatereshonok/yamdb_final/nginx"
+          strip_components: 2
           
       - name: Copy docker-compose.yaml via ssh
         uses: appleboy/scp-action@master
@@ -92,6 +93,7 @@ jobs:
           port: ${{ secrets.PORT }}
           source: "infra/docker-compose.yaml, .env"
           target: "/home/annatereshonok/yamdb_final"
+          strip_components: 1
     
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
