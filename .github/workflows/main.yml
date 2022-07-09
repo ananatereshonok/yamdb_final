@@ -104,11 +104,10 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             cd ~
-            mkdir yamdb_final
             cd ./yamdb_final
             sudo docker pull atereshonok/yamdb_final
-            sudo docker-compose stop
-            sudo docker-compose up --force-recreate -d web
+            sudo docker compose stop
+            sudo docker compose up --force-recreate -d web
           
 
   send_message:
