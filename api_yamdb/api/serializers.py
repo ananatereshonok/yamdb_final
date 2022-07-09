@@ -1,8 +1,7 @@
-from rest_framework import serializers
-from django.db.models import Avg
-
 from authentication.models import User
-from reviews.models import Comment, Review, Category, Genre, Title
+from django.db.models import Avg
+from rest_framework import serializers
+from reviews.models import Category, Comment, Genre, Review, Title
 
 
 class UsernameValidate:

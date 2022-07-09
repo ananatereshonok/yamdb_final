@@ -1,8 +1,9 @@
 import json
-from django.contrib.sites.shortcuts import get_current_site
+
 from django.contrib.auth import get_user_model
-from rest_framework_simplejwt.tokens import RefreshToken
+from django.contrib.sites.shortcuts import get_current_site
 from django.core.mail import EmailMessage
+from rest_framework_simplejwt.tokens import RefreshToken
 
 User = get_user_model()
 

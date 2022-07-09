@@ -1,35 +1,24 @@
+from core.utils import EmailSender
 from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import status, viewsets, permissions
+from rest_framework import permissions, status, viewsets
+from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
-from rest_framework.decorators import action
-
-from core.utils import EmailSender
 from reviews.models import Category, Genre, Title
-from .mixins import ListCreateDestroyViewSet
-from .filters import TitleSearchFilter
-from .serializers import (
-    UserAdminSerializer,
-    UserMeSerializer,
-    RegistrationSerializer,
-    LoginSerializer,
-    CategoriesSerializer,
-    GenresSerializer,
-    TitlesReadSerializer,
-    TitlesCreateSerializer,
-    ReviewSerializer,
-    CommentSerializer,
-)
-from .permissions import (
-    AdminOnlyPermission,
-    IsAdminOrReadOnly,
-    ReadOnlyOrModOrAdmin,
-)
 
+from .filters import TitleSearchFilter
+from .mixins import ListCreateDestroyViewSet
+from .permissions import (AdminOnlyPermission, IsAdminOrReadOnly,
+                          ReadOnlyOrModOrAdmin)
+from .serializers import (CategoriesSerializer, CommentSerializer,
+                          GenresSerializer, LoginSerializer,
+                          RegistrationSerializer, ReviewSerializer,
+                          TitlesCreateSerializer, TitlesReadSerializer,
+                          UserAdminSerializer, UserMeSerializer)
 
 User = get_user_model()
 

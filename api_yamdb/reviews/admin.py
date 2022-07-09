@@ -1,13 +1,7 @@
-from django.contrib import admin
 from django.conf import settings as conf_settings
+from django.contrib import admin
 
-from .models import (
-    Category,
-    Genre,
-    Title,
-    Review,
-    Comment,
-)
+from .models import Category, Comment, Genre, Review, Title
 
 EMPTY_VALUE_DISPLAY = conf_settings.EMPTY_VALUE_DISPLAY
 
