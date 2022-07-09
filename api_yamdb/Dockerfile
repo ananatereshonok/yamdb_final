@@ -8,8 +8,4 @@ RUN pip3 install -r requirements.txt --no-cache-dir
 
 COPY . .
 
-RUN python manage.py makemigrations --no-input
-RUN python manage.py migrate --no-input
-RUN python manage.py collectstatic --no-input
-
 CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000" ] 
