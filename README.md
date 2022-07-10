@@ -19,7 +19,7 @@ git clone git@github.com:ananatereshonok/yamdb_final.git
 2. Для работы с проектом локально - установите вирутальное окружение и восстановите зависимости.
 ```
 python -m venv venv
-pip install -r requirements.txt 
+pip install -r api_yamdb/requirements.txt 
 ```
 ### Подготовка удаленного сервера для развертывания приложения
 
