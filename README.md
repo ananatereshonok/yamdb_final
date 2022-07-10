@@ -10,3 +10,31 @@
 
 Благодарные или возмущённые читатели оставляют к произведениям текстовые отзывы (*Review*) и выставляют произведению рейтинг (оценку в диапазоне от одного до десяти). Из множества оценок автоматически высчитывается средняя оценка произведения.
 
+## Начало работы
+
+1. Клонируйте репозиторий на локальную машину.
+```
+git clone git@github.com:ananatereshonok/yamdb_final.git
+```
+2. Для работы с проектом локально - установите вирутальное окружение и восстановите зависимости.
+```
+python -m venv venv
+pip install -r requirements.txt 
+```
+### Подготовка удаленного сервера для развертывания приложения
+
+Для работы с проектом на удаленном сервере должен быть установлен Docker и [docker-compose](https://docs.docker.com/engine/install/ubuntu/).
+
+### Подготовка репозитория на GitHub
+
+Для использования Continuous Integration и Continuous Deployment необходимо в репозитории на GitHub прописать Secrets - переменные доступа к вашим сервисам.
+Переменые прописаны в workflows/yamdb_workflow.yaml
+
+* DOCKER_PASSWORD, DOCKER_USERNAME, DOCKER_REPOSITORY - для загрузки и скачивания образа с репозитория DockerHub 
+* DB_ENGINE, DB_HOST, DB_NAME, DB_PORT, POSTGRES_PASSWORD, POSTGRES_USER - для подключения к базе данных 
+* SECRET_KEY проекта
+* SSH_KEY, USER, HOST, PASSPHRASE, SSH_KEY - для подключения к удаленному серверу 
+* TELEGRAM_TO, TELEGRAM_TOKEN - для отправки сообщений в Telegram
+
+## Технологии используемые в проекте
+Python, Django, Django REST Framework, PostgreSQL, Nginx, Docker, GitHub Actions
