@@ -42,5 +42,5 @@ Python, Django, Django REST Framework, PostgreSQL, Nginx, Docker, GitHub Actions
 ## Адреса приложения
 
 * [http://51.250.99.140/api/v1/](http://51.250.99.140/api/v1/)
-* [http://51.250.99.140/admin](http://51.250.99.140/admin/)
+* [http://51.250.99.140/admin/](http://51.250.99.140/admin/)
 * [http://51.250.99.140/redoc/](http://51.250.99.140/redoc/)
